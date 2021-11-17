@@ -48,7 +48,7 @@ jobs:
          uses: docker/build-push-action@v2 # Выполняет push образа в DockerHub
          with:
            push: true
-           tags: username/<репозиторий-на-docker-hub>:latest
+           tags: ${{ secrets.DOCKER_USERNAME }}/infra:latest
 
   deploy:
    runs-on: ubuntu-latest
